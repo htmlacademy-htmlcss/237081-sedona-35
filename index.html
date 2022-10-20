@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Седона</title>
+
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
   <header class="main-header">
-    <a class="logo main-header__logo">
+    <a class="logo main-header__logo" href="index.html">
       <img class="logo__img" src="images/sedona-logo.svg" width="140" height="70" alt="Логотип сайта Седона">
     </a>
 
@@ -37,7 +39,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="btn" href="#">Хочу сюда!</a>
+          <a class="btn btn--small" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -47,7 +49,8 @@
     <h1 class="visually-hidden">Сайт города Седона</h1>
     <section class="hero">
       <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
-      <img class="hero-img" src="images/hero-welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
+      <img class="hero-img" src="images/hero-welcome.svg" width="458" height="352"
+           alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
     </section>
 
     <section class="reasons">
@@ -64,7 +67,7 @@
           <h3 class="reason-list__title">Небольшая площадь</h3>
           <p class="reason-list__text">Все достопримечательности находятся очень близко</p>
         </li>
-        <li class="reason-list__item">
+        <li class="reason-list__item reason-list__item--darker">
           <h3 class="reason-list__title">Красивая дорога</h3>
           <p class="reason-list__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
@@ -80,15 +83,15 @@
       </ul>
 
       <ul class="reason-list">
-        <li class="reason-list__item reason-list__item--icon reason-list__item--icon_house">
+        <li class="reason-list__item reason-list__item--icon reason-list__item--icon_house reason-list__item--darker">
           <h3 class="reason-list__title">Жильё</h3>
           <p class="reason-list__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </li>
-        <li class="reason-list__item reason-list__item--icon reason-list__item--icon_burger">
+        <li class="reason-list__item reason-list__item--icon reason-list__item--icon_burger reason-list__item--lighter">
           <h3 class="reason-list__title">Еда</h3>
           <p class="reason-list__text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
         </li>
-        <li class="reason-list__item reason-list__item--icon reason-list__item--icon_gift">
+        <li class="reason-list__item reason-list__item--icon reason-list__item--icon_gift reason-list__item--darker">
           <h3 class="reason-list__title">Сувениры</h3>
           <p class="reason-list__text">Не только китайского, но и настоящего местного производства!</p>
         </li>
@@ -105,13 +108,13 @@
   </main>
 
   <footer class="main-footer">
-    <section class="subscribe">
+    <section class="subscribe subscribe--main">
       <h2 class="title">Подпишитесь на рассылку</h2>
       <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
 
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <input class="input" type="email" placeholder="Ваш e-mail" aria-label="e-main">
-        <button class="btn" type="submit">Подписаться</button>
+        <input class="control__input" type="email" placeholder="Ваш e-mail" aria-label="e-main">
+        <button class="btn btn--secondary" type="submit">Подписаться</button>
       </form>
     </section>
 
