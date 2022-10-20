@@ -120,7 +120,7 @@ body {
 
   background-color: #abc8e3;
   background-image: url("../images/hero-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -208,7 +208,7 @@ body {
 
   background-color: #abc8e3;
   background-image: url("../images/catalog-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
