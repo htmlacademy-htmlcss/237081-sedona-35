@@ -133,6 +133,11 @@ body {
   width: 140px;
 }
 
+.logo__img {
+  max-width: 100%;
+  height: auto;
+}
+
 .navigation {
   display: flex;
 }
@@ -148,12 +153,12 @@ body {
 }
 
 .navigation__menu {
-  flex-grow: 1;
-  margin-right: 30px;
+  width: 500px;
+  margin-right: auto;
 }
 
 .navigation__action-menu {
-  width: 270px;
+  max-width: 310px;
 }
 
 .menu__link {
