@@ -110,7 +110,7 @@
             </ul>
           </fieldset>
           <div class="catalog-filter__buttons">
-            <button class="btn btn--small btn--secondary" type="submit">Применить</button>
+            <button class="btn btn--small btn--secondary catalog-filter__submit" type="submit">Применить</button>
             <button class="btn btn--small btn--transparent" type="reset">Сбросить</button>
           </div>
         </form>
@@ -129,17 +129,17 @@
 
           <ul class="catalog-appearance__view-list">
             <li class="catalog-appearance__view-item">
-              <a class="btn btn--outline" href="#">
+              <a class="catalog-appearance__view-link" href="#">
                 <span class="visually-hidden">Показать карточки</span>
               </a>
             </li>
             <li class="catalog-appearance__view-item">
-              <a class="btn btn--outline" href="#">
+              <a class="catalog-appearance__view-link" href="#">
                 <span class="visually-hidden">Показать большие карточки</span>
               </a>
             </li>
             <li class="catalog-appearance__view-item">
-              <a class="btn btn--outline" href="#">
+              <a class="catalog-appearance__view-link" href="#">
                 <span class="visually-hidden">Показать список</span>
               </a>
             </li>
@@ -156,12 +156,14 @@
               <span class="hotel-card__type">Гостиница</span>
               <b class="hotel-card__price">От 4000 ₽</b>
             </p>
-            <a class="btn" href="#">Подробнее</a>
-            <button class="btn btn--secondary" type="button">В избранное</button>
-            <div class="hotel-card__stars">
-              <span class="visually-hidden">4 звезды</span>
+            <div class="hotel-card__buttons">
+              <a class="btn btn--small hotel-card__btn" href="#">Подробнее</a>
+              <button class="btn btn--secondary btn--small hotel-card__btn" type="button">В избранное</button>
+              <div class="hotel-card__stars">
+                <span class="visually-hidden">4 звезды</span>
+              </div>
+              <span class="hotel-card__rating">Рейтинг: 8,5</span>
             </div>
-            <span class="hotel-card__rating">Рейтинг: 8,5</span>
           </li>
           <li class="hotel-card">
             <a class="hotel-card__link" href="#">
@@ -172,12 +174,14 @@
               <span class="hotel-card__type">Гостиница</span>
               <b class="hotel-card__price">От 5000 ₽</b>
             </p>
-            <a class="btn" href="#">Подробнее</a>
-            <button class="btn btn--secondary" type="button">В избранное</button>
-            <div class="hotel-card__stars">
-              <span class="visually-hidden">4 звезды</span>
+            <div class="hotel-card__buttons">
+              <a class="btn btn--small hotel-card__btn" href="#">Подробнее</a>
+              <button class="btn btn-success btn--small hotel-card__btn" type="button">В избранное</button>
+              <div class="hotel-card__stars">
+                <span class="visually-hidden">4 звезды</span>
+              </div>
+              <span class="hotel-card__rating">Рейтинг: 9,2</span>
             </div>
-            <span class="hotel-card__rating">Рейтинг: 9,2</span>
           </li>
           <li class="hotel-card">
             <a class="hotel-card__link" href="#">
@@ -188,12 +192,14 @@
               <span class="hotel-card__type">Гостиница</span>
               <b class="hotel-card__price">От 2500 ₽</b>
             </p>
-            <a class="btn" href="#">Подробнее</a>
-            <button class="btn btn--secondary" type="button">В избранное</button>
-            <div class="hotel-card__stars hotel-card__stars--three">
-              <span class="visually-hidden">3 звезды</span>
+            <div class="hotel-card__buttons">
+              <a class="btn btn--small hotel-card__btn" href="#">Подробнее</a>
+              <button class="btn btn--secondary btn--small hotel-card__btn" type="button">В избранное</button>
+              <div class="hotel-card__stars hotel-card__stars--three">
+                <span class="visually-hidden">3 звезды</span>
+              </div>
+              <span class="hotel-card__rating">Рейтинг: 6,9</span>
             </div>
-            <span class="hotel-card__rating">Рейтинг: 6,9</span>
           </li>
           <li class="hotel-card">
             <a class="hotel-card__link" href="#">
@@ -204,12 +210,14 @@
               <span class="hotel-card__type">Гостиница</span>
               <b class="hotel-card__price">От 1500 ₽</b>
             </p>
-            <a class="btn" href="#">Подробнее</a>
-            <button class="btn btn--secondary" type="button">В избранное</button>
-            <div class="hotel-card__stars">
-              <span class="visually-hidden">2 звезды</span>
+            <div class="hotel-card__buttons">
+              <a class="btn btn--small hotel-card__btn" href="#">Подробнее</a>
+              <button class="btn btn--secondary btn--small hotel-card__btn" type="button">В избранное</button>
+              <div class="hotel-card__stars">
+                <span class="visually-hidden">2 звезды</span>
+              </div>
+              <span class="hotel-card__rating">Рейтинг: 5,0</span>
             </div>
-            <span class="hotel-card__rating">Рейтинг: 5,0</span>
           </li>
         </ul>
 
@@ -240,10 +248,10 @@
       <section class="subscribe">
         <div class="subscribe__container">
           <h2 class="title">Подпишитесь на рассылку</h2>
-          <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="subscribe__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="input" type="email" placeholder="Ваш e-mail" aria-label="e-main">
+          <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="control__input subscribe__input" type="email" placeholder="Ваш e-mail" aria-label="e-main">
             <button class="btn btn--secondary" type="submit">Подписаться</button>
           </form>
         </div>
