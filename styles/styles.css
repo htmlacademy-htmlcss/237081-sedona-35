@@ -58,7 +58,7 @@ body {
 
 /*buttons*/
 .btn {
-  display: block;
+  display: inline-block;
   padding: 8px 50px;
 
   font-size: 20px;
@@ -105,6 +105,7 @@ body {
   line-height: 24px;
 
   background-color: #f2f2f2;
+  border: none;
 }
 
 .control-select {
@@ -172,7 +173,7 @@ body {
 
 .menu {
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -201,6 +202,11 @@ body {
   text-align: center;
   color: #000000;
   text-decoration: none;
+}
+
+.menu__item > .btn {
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 .quantity-favorite {
@@ -232,7 +238,7 @@ body {
 .reasons-intro {
   width: 660px;
   margin: 0 auto;
-  padding-top: 69px;
+  padding-top: 65px;
   padding-bottom: 69px;
 }
 
@@ -276,17 +282,15 @@ body {
   background-color: #82b3d3;
 }
 
-.reason-list__item--reverse {
-  flex-direction: row-reverse;
+.reason-list__description {
+  width: 232px;
+  min-height: 214px;
+  padding: 103px 84px 67px;
 }
 
-.reason-list__description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 230px;
-  min-height: 214px;
-  padding: 85px;
+.reason-list__item--big .reason-list__description {
+  padding-top: 90px;
+  padding-bottom: 80px;
 }
 
 .reason-list__title {
@@ -319,12 +323,10 @@ body {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .hotel-search {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 592px;
   margin: 96px auto;
 
@@ -337,8 +339,8 @@ body {
 }
 
 .subscribe {
-  padding-top: 96px;
-  padding-bottom: 104px;
+  width: 684px;
+  padding: 96px 258px 104px;
   text-align: center;
 }
 
@@ -349,10 +351,6 @@ body {
   background-image: url("../images/subscribe-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-.subscribe__container {
-  width: 684px;
-  margin: 0 auto;
 }
 
 .subscribe--main .title {
@@ -375,7 +373,7 @@ body {
 .contacts {
   display: flex;
   justify-content: space-between;
-  padding: 45px 70px 35px;
+  padding: 52px 70px 28px;
 }
 
 .contacts__social {
@@ -407,6 +405,7 @@ body {
 
   color: #82b3d3;
   text-decoration: none;
+  text-align: center;
 }
 
 .address {
@@ -640,10 +639,9 @@ body {
 
 .pagination__link {
   display: block;
-  width: 60px;
+  min-width: 36px;
   height: 36px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px;
 
   font-size: 20px;
   line-height: 36px;
