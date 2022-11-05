@@ -569,6 +569,10 @@ body {
 }
 
 .hotel-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 16px;
   width: 300px;
   padding: 20px;
 
@@ -578,7 +582,7 @@ body {
 .hotel-card__link {
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
+  grid-column: 1 / -1;
 
   color: #000000;
   text-decoration: none;
@@ -600,29 +604,17 @@ body {
   order: -1;
 }
 
-.hotel-card__info {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
 .hotel-card__type {
   font-size: 18px;
   line-height: 21px;
 }
 
 .hotel-card__price {
-  float: right;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: right;
 }
-
-.hotel-card__buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 16px;
-}
-
 .hotel-card__btn {
   padding-right: 0;
   padding-left: 0;
