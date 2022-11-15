@@ -61,7 +61,7 @@ body {
   display: inline-block;
   padding: 8px 50px;
 
-  font-family:  "PT Sans", "Arial", sans-serif;
+  font-family: inherit;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -136,7 +136,7 @@ body {
 
 .btn--transparent:focus {
   background-color: transparent;
-  border: 3px solid #83b3b3;
+  outline: 3px solid #83b3b3;
 }
 
 .btn--transparent:active {
@@ -164,28 +164,123 @@ body {
 
 /*forms*/
 .control {
+  position: relative;
+
+  display: block;
+  padding-left: 36px;
+
   font-size: 18px;
   line-height: 23px;
 }
 
-.control__input {
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control__mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control__input[type="radio"] + .control__mark {
+  border-radius: 50%;
+}
+
+.control__input:checked + .control__mark::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+
+  background-repeat: no-repeat;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark::before {
+  background-image: url("../images/icons/control-checkbox.svg");
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  background-image: url("../images/icons/control-radio.svg");
+}
+
+.control__input:focus + .control__mark {
+  outline: 3px solid #83B3D3;
+}
+
+.input {
   padding: 14px 20px;
 
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
+  color: #000000;
 
   background-color: #f2f2f2;
   border: none;
+  border-radius: 4px;
+}
+
+.input:hover,
+.input:focus {
+  background-color: #e6e6e6;
+}
+
+.input:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.input:active {
+  background-color: #f2f2f2;
+  outline: 2px solid #000000;
+}
+
+.input::placeholder {
+  opacity: 0.6;
 }
 
 .control-select {
-  padding: 14px 20px;
+  padding: 14px 15px;
+  padding-right: 40px;
 
+  font: inherit;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
 
   background-color: #ffffff;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  background-image: url("../images/icons/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  appearance: none;
+}
+
+.control-select:hover,
+.control-select:focus {
+  border-color: #68a2ca;
+}
+
+.control-select:active {
+  border-color: #3f5e72;
+}
+
+.control-select:disabled,
+.control-select:hover {
+  border-color: #000000;
+  opacity: 0.3;
 }
 
 /*titles*/
@@ -532,6 +627,12 @@ body {
 
 .subscribe__input {
   flex-grow: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.subscribe__input::placeholder {
+  font-weight: 400;
 }
 
 .subscribe__btn {
@@ -692,8 +793,12 @@ color: rgba(255, 255, 255, 0.6);
   border: none;
 }
 
+.catalog-filter__group--housing-type {
+  margin-right: 152px;
+}
+
 .catalog-filter__title {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 
   font-size: 20px;
   line-height: 24px;
@@ -708,7 +813,100 @@ color: rgba(255, 255, 255, 0.6);
 }
 
 .catalog-filter__item:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.range {
+  width: 288px;
+}
+
+.range__wrapper-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-bottom: 45px;
+}
+
+.range__scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range__bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range__toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range__toggle:hover,
+.range__toggle:focus {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range__toggle:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.range__toggle--min {
+  top: -8px;
+  left: 0;
+}
+
+.range__toggle--max {
+  top: -8px;
+  right: 0;
+}
+
+.range__label {
+  position: relative;
+}
+
+.range__label-text {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.3);
+
+}
+
+.range__input {
+  width: 78px;
+  padding: 12px 45px 12px 20px;
+}
+
+.range__input--min {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.range__input--max {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.range__input::-webkit-outer-spin-button,
+.range__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .catalog-filter__buttons {
@@ -724,7 +922,7 @@ color: rgba(255, 255, 255, 0.6);
 }
 
 .catalog-hotels {
-  padding: 48px 70px 60px;
+  padding: 46px 70px 60px;
 }
 
 
