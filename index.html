@@ -135,7 +135,7 @@
         <p class="subscribe__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
         <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="input subscribe__input" type="email" placeholder="Ваш e-mail" aria-label="e-main">
+          <input class="input subscribe__input" type="email" placeholder="Ваш e-mail" aria-label="e-mail">
           <button class="btn btn--secondary subscribe__btn" type="submit">Подписаться</button>
         </form>
       </section>
@@ -183,5 +183,53 @@
       </section>
     </footer>
   </div>
+
+  <div class="modal-container modal-container--shown">
+    <div class="modal modal-search">
+      <button class="modal__close-button" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal__content">
+        <h2 class="title modal__title">Поиск гостиницы в Седоне</h2>
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="search-form__label" for="search-form-date-in">Дата заезда:</label>
+          <div class="search-form__input-group">
+            <input class="input search-form__date" type="text" id="search-form-date-in" name="date-in" value="27 апреля 2020">
+            <p class="search-form__error">Мы не можем отправить вас в прошлое.</p>
+          </div>
+          <label class="search-form__label" for="search-form-date-out">Дата выезда:</label>
+          <div class="search-form__input-group">
+            <input class="input search-form__date" type="text" id="search-form-date-out" name="date-out" value="1 сентября 2023">
+            <p class="search-form__hint">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
+          <label class="search-form__label" for="search-form-adults">Взрослые:</label>
+          <div class="search-form__count-wrapper">
+            <button class="search-form__count-minus" type="button">
+              <span class="visually-hidden">Уменьшить количество</span>
+            </button>
+            <input class="input search-form__count" type="text" id="search-form-adults" name="date-out" value="2">
+            <button class="search-form__count-plus" type="button">
+              <span class="visually-hidden">Увеличить количество</span>
+            </button>
+          </div>
+          <label class="search-form__label" for="search-form-children">
+            Дети:
+            <span class="search-form__info"></span>
+          </label>
+          <div class="search-form__count-wrapper search-form__children">
+            <button class="search-form__count-minus" type="button">
+              <span class="visually-hidden">Уменьшить количество</span>
+            </button>
+            <input class="input search-form__count" type="text" id="search-form-children" name="date-out" value="2">
+            <button class="search-form__count-plus" type="button">
+              <span class="visually-hidden">Увеличить количество</span>
+            </button>
+          </div>
+          <button class="btn btn--secondary search-form__submit" type="submit">Найти</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
 </body>
 </html>
