@@ -1243,7 +1243,7 @@ color: rgba(255, 255, 255, 0.6);
 
 .search-form {
   display: grid;
-  grid-template-columns: max-content 1fr max-content 1fr;
+  grid-template-columns: max-content 1fr auto 1fr;
   column-gap: 20px;
   row-gap: 25px;
 }
@@ -1261,6 +1261,11 @@ color: rgba(255, 255, 255, 0.6);
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+}
+
+.search-form__label-icon {
+  position: relative;
+
 }
 
 .search-form__error,
@@ -1346,22 +1351,6 @@ color: rgba(255, 255, 255, 0.6);
   justify-self: end;
 }
 
-.search-form__info {
-  position: absolute;
-  top: 0;
-  right: -40px;
-
-  display: inline-block;
-  width: 26px;
-  height: 26px;
-
-  background-color: #83b3d3;
-  background-image: url("../images/icons/info.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-}
-
 .search-form__submit
 {
   grid-column: 1 / -1;
@@ -1369,4 +1358,69 @@ color: rgba(255, 255, 255, 0.6);
   min-height: 60px;
 
   border-radius: 10px;
+}
+
+.tooltip {
+  position: absolute;
+  margin-top: -2px;
+  margin-left: 12px;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip__toggle {
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #83b3d3;
+  background-image: url("../images/icons/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+}
+
+.tooltip__text {
+  position: absolute;
+  top: 100%;
+  transform: translateX(-115px);
+  z-index: 1;
+
+  display: none;
+
+  background-color: #333333;
+  width: 216px;
+  padding: 20px 18px 22px 22px;
+  margin-top: 15px;
+
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip__text:after {
+  content:'';
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+
+  width: 19px;
+  height: 9px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../images/icons/tooltip-arrow.svg");
+}
+
+.tooltip__toggle:hover + .tooltip__text,
+.tooltip__toggle:focus + .tooltip__text {
+  display: block;
 }
