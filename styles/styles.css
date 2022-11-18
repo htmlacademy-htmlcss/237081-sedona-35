@@ -892,6 +892,7 @@ color: rgba(255, 255, 255, 0.6);
 .range__input {
   width: 143px;
   padding: 12px 45px 12px 20px;
+  -moz-appearance:textfield;
 }
 
 .range__input--min {
@@ -953,7 +954,8 @@ color: rgba(255, 255, 255, 0.6);
 
 .catalog-appearance__view-list {
   display: flex;
-  width: 160px;
+  flex-wrap: wrap;
+  width: 161px;
   margin: 0;
   padding: 0;
 
@@ -1130,6 +1132,7 @@ color: rgba(255, 255, 255, 0.6);
 
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
