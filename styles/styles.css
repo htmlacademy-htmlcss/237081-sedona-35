@@ -955,15 +955,12 @@ color: rgba(255, 255, 255, 0.6);
 .catalog-appearance__view-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 7px;
   width: 161px;
   margin: 0;
   padding: 0;
 
   list-style-type: none;
-}
-
-.catalog-appearance__view-item:not(:last-child) {
-  margin-right: 7px;
 }
 
 .catalog-appearance__view-link {
